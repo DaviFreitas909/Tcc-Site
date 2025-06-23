@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: gray;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    background-color: #181717;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.topo {
+    background-color: black;
+    width: 100%;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: white;
+}
+
+.pesquisa {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    width: 300px;
+}
+
+@media (max-width: 768px) {
+    .topo {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .links {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .pesquisa {
+        width: 100%;
+    }
+}
+footer {
+  background-color: #181717;
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+.footer-col img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 0.85em;
+  text-align: center;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer-col img {
+    margin: 0 auto;
+  }
+
+  .footer-bottom {
+    padding: 10px;
+  }
+}
+
+
