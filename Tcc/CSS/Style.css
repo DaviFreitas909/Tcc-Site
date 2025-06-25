@@ -295,13 +295,7 @@ footer {
     }
 }
 
-h1 {
-    margin: 30px;
-    padding: 20px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-style: italic;
-}
+
 /* Container principal (imagem + botão) */
 /* Container principal */
 .container-imagem {
@@ -310,7 +304,7 @@ h1 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  border: 3px solid #FF4500; /* Borda laranja */
+  border: 3px solid #000000; /* Borda laranja */
   border-radius: 8px;
   overflow: hidden;
 }
@@ -375,4 +369,95 @@ h1 {
   background: #E03E00;
   transform: scale(1.05);
 }
+h3 {
+text-align: center;
+}
+.h1-main {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.h1-s{
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: fantasy;
 
+}
+        /* Container principal que organiza os cards lado a lado */
+        .conteiner-principal {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Estilo base para cada card de notícia */
+        .conteiner-noticia {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            background: rgb(102, 99, 99);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+            font-family: Arial, sans-serif;
+        }
+
+        .conteiner-noticia:hover {
+            transform: translateY(-5px);
+        }
+
+        .lgbt-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .conteiner-noticia h3 {
+            color: #333;
+            margin: 0 0 15px 0;
+            font-size: 1.2rem;
+            min-height: 60px;
+        }
+
+        .conteiner-noticia button {
+            background: #8e44ad;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .conteiner-noticia button:hover {
+            background: #7d3c98;
+        }
+
+        /* Responsividade */
+        @media (max-width: 900px) {
+            .conteiner-noticia {
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .conteiner-principal {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .conteiner-noticia {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
