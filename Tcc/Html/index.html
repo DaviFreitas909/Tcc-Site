@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Habitat Brasil</title>
   <link rel="stylesheet" href="../CSS/Style.css">
+  <script src="../JavaS/main.js"></script>
   <link rel="shortcut icon" href="../Imagens/logo2.png" type="image/x-icon">
 </head>
 
@@ -13,91 +14,131 @@
   <header class="cabecalho">
     <div class="topo">
       <a href="index.html">
-      <img src="../Imagens/logo.png" width="250"  alt="Logo Habitat Brasil">
-    </a>
+        <img src="../Imagens/logo.png" width="250" alt="Logo Habitat Brasil">
+      </a>
 
-<div class="dropdown">
-  <a href="apoie.html">Apoie</a>
-  <div class="dropdown-itens">
-    <a href="">Faça uma Doação</a>
-    <a href="">Mão na Massa</a>
-    <a href="">Voluntariado Corporativo</a>
-    <a href="">Envolva sua Empresa</a>
+      <div class="dropdown">
+        <a href="#">Apoie</a>
+        <div class="dropdown-itens">
+          <a href="">Faça uma Doação</a>
+          <a href="">Mão na Massa</a>
+          <a href="">Voluntariado Corporativo</a>
+          <a href="">Envolva sua Empresa</a>
 
-  </div>
-</div>
+        </div>
+      </div>
 
-<div class="dropdown">
-  <a href="sobre.html">Sobre nos</a>
-  <!-- esses topicos vão estar todos nesse link acima  -->
-  <div class="dropdown-itens">
-    <a href="">Governança & Equipe</a>
-    <a href="">Transparencia</a>
-    <a href="">Trabalhe Conosco</a>
-    <a href="">Sala de imprensa</a>
-    <a href="">Contato</a>
+      <div class="dropdown">
+        <a href="#">Sobre nos</a>
+        <!-- esses topicos vão estar todos nesse link acima  -->
+        <div class="dropdown-itens">
+          <a href="sobre.html">Sobre nos</a>
+          <a href="">Governança & Equipe</a>
+          <a href="">Transparencia</a>
+          <a href="">Trabalhe Conosco</a>
+          <a href="">Sala de imprensa</a>
+          <a href="">Contato</a>
 
-  </div>
-</div>
+        </div>
+      </div>
 
-<div class="dropdown">
-  <a href="projetos.html">Projetos</a>
-  <div class="dropdown-itens">
-    <a href=""></a>
-    <a href=""></a>
-    <a href=""></a>
-    <a href=""></a>
+      <div class="dropdown">
+        <a href="#">Projetos</a>
+        <div class="dropdown-itens">
+          <a href="projetos.html">Projetos</a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
 
-  </div>
-</div>
+        </div>
+      </div>
 
-<div class="dropdown">
-  <a href="impactos.html">Impacto</a>
-  <div class="dropdown-itens">
-    <a href="">Nossa causa</a>
-    <a href="">Nossos Números</a>
-    <a href="">Historias</a>
-    <a href="">Mapa de Organnizaçoes</a>
+      <div class="dropdown">
+        <a href="#">Impacto</a>
+        <div class="dropdown-itens">
+          <a href="impactos.html">Impacto</a>
+          <a href="">Nossa causa</a>
+          <a href="">Nossos Números</a>
+          <a href="">Historias</a>
+          <a href="">Mapa de Organnizaçoes</a>
 
-  </div>
-</div>
+        </div>
+      </div>
 
-<div class="dropdown">
-  <a href="">Parceiros</a>
-  <div class="dropdown-itens">
-    <a href="">Conheça Nossos Parceiros</a>
+      <div class="dropdown">
+        <a href="#">Parceiros</a>
+        <div class="dropdown-itens">
+          <a href="parceiros.html">Parceiros</a>
+          <a href="">Conheça Nossos Parceiros</a>
 
-  </div>
-</div>
+        </div>
+      </div>
       <input class="pesquisa" type="search" placeholder="Pesquisar...">
 
     </div>
   </header>
 
-  <main>
+ <main>
+  <div class="slider-container">
+    <div class="slides-container">
+        <div class="slide active">
+            <img src="../Imagens/slide0.jpg" alt="Imagem 1 do slider">
+        </div>
+        <div class="slide">
+            <img src="../Imagens/sedeDeExperança.jpg" alt="Imagem 2 do slider">
+        </div>
+        <div class="slide">
+            <img src="../Imagens/100mil.jpg" alt="Imagem 3 do slider">
+        </div>
+    </div>
 
-  </main>
+    <button class="slide-btn slide-btn-prev" aria-label="Slide anterior">&lt;</button>
+    <button class="slide-btn slide-btn-next" aria-label="Próximo slide">&gt;</button>
+
+    <div class="slide-dots">
+        <span class="dot active" data-index="0" aria-label="Ir para slide 1"></span>
+        <span class="dot" data-index="1" aria-label="Ir para slide 2"></span>
+        <span class="dot" data-index="2" aria-label="Ir para slide 3"></span>
+        <span class="dot" data-index="3" aria-label="Ir para slide 4"></span>
+    </div>
+</div>
+ <h1><Strong>Ja transformamos a vida de mais de 230 mil Pessoas no Brasil</Strong></h1> 
+
+<div class="container-imagem">
+  <img src="../Imagens/doação.jpg" alt="Doação salvando vidas" class="imagem-fundo">
+  <div class="conteudo-sobreposto">
+    <h1 class="titulo-doacao">Doe Agora</h1>
+    <p class="texto-doacao">A sua doação pode transformar a vida de milhares de famílias em situação de vulnerabilidade.</p>
+    <button class="botao-sobre-imagem">DOE AGORA</button>
   </div>
+</div>
+
+
+</main>
+
+
+
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-col logo">
         <img src="../Imagens/logo.png" width="250px" alt="Habitat Brasil">
         <h4><strong>Nossas Redes Sociais</strong></h4>
- <a href="https://www.facebook.com/habitat.br/" target="_blank">
-  <img src="../Imagens/facebook.png" style="width: 50px;" alt="Icone do facebook">
-</a>
- <a href="https://www.instagram.com/habitatbrasil/" target="_blank">
-  <img src="../Imagens/instagram.png" style="width: 50px;"alt="logo do instagram">
-</a>
- <a href="https://www.linkedin.com/company/habitat-para-a-humanidade-brasil/" target="_blank">
-  <img src="../imagens/linkendin.png" style="width: 50px; " alt="Logo do linkendin">
-</a>
- <a href="https://twitter.com/habitat_brasil" target="_blank">
-  <img src="../Imagens/twitter.png" style="width: 50px; " alt="Logo da twitter">
-</a>
- <a href="https://www.youtube.com/user/HabitatBrasil" target="_blank">
-  <img src="../Imagens/youtube.png" style="width: 50px;" alt="Logo do Youtube">
-</a>
+        <a href="https://www.facebook.com/habitat.br/" target="_blank">
+          <img src="../Imagens/facebook.png" style="width: 50px;" alt="Icone do facebook">
+        </a>
+        <a href="https://www.instagram.com/habitatbrasil/" target="_blank">
+          <img src="../Imagens/instagram.png" style="width: 50px;" alt="logo do instagram">
+        </a>
+        <a href="https://www.linkedin.com/company/habitat-para-a-humanidade-brasil/" target="_blank">
+          <img src="../imagens/linkendin.png" style="width: 50px; " alt="Logo do linkendin">
+        </a>
+        <a href="https://twitter.com/habitat_brasil" target="_blank">
+          <img src="../Imagens/twitter.png" style="width: 50px; " alt="Logo da twitter">
+        </a>
+        <a href="https://www.youtube.com/user/HabitatBrasil" target="_blank">
+          <img src="../Imagens/youtube.png" style="width: 50px;" alt="Logo do Youtube">
+        </a>
       </div>
 
 
@@ -130,8 +171,9 @@
     </div>
 
     <div class="footer-bottom">
-      manidade Brasil – <a href="politicaDePrivacidade.html">Política de Privacidade</a> | <a href="politicaDoDoador.html">Política do Doador</a> | <a
-        href="https://www.webinhood.com.br/" target="_blank">Desenvolvido por Webinhood</a></p>
+      manidade Brasil – <a href="politicaDePrivacidade.html">Política de Privacidade</a> | <a
+        href="politicaDoDoador.html">Política do Doador</a> | <a href="https://www.webinhood.com.br/"
+        target="_blank">Desenvolvido por Webinhood</a></p>
       <p>© 2018 – Habitat Brasil
     </div>
   </footer>

@@ -181,3 +181,198 @@ footer {
         padding: 10px;
     }
 }
+/* Estilos gerais do slider */
+.slider-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 10px auto;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: solid 3px;
+}
+
+/* Container dos slides */
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 500px; /* Ajuste conforme necessário */
+}
+
+/* Estilo individual de cada slide */
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Botões de navegação */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.slide-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-btn-prev {
+    left: 20px;
+}
+
+.slide-btn-next {
+    right: 20px;
+}
+
+/* Pontos de navegação */
+.slide-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .slides-container {
+        height: 400px;
+    }
+    
+    .slide-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slides-container {
+        height: 300px;
+    }
+    
+    .slide-dots {
+        bottom: 10px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+h1 {
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+}
+/* Container principal (imagem + botão) */
+/* Container principal */
+.container-imagem {
+  display: grid;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 3px solid #FF4500; /* Borda laranja */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Imagem de fundo */
+.imagem-fundo {
+  width: 100%;
+  height: 400px; /* Altura fixa para melhor visualização */
+  object-fit: cover;
+  display: block;
+  grid-area: 1/1;
+}
+
+/* Container do conteúdo sobreposto */
+.conteudo-sobreposto {
+  grid-area: 1/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end; /* Alinha tudo à direita */
+  padding: 30px;
+  height: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(to left, rgba(0,0,0,0.7) 30%, transparent);
+}
+
+/* Título */
+.titulo-doacao {
+  color: #FF4500;
+  font-size: 3em;
+  margin: 0 0 10px 0;
+  text-align: right;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Texto */
+.texto-doacao {
+  color: #FFA07A; /* Cor laranja mais clara */
+  font-size: 1.2em;
+  margin: 0 0 20px 0;
+  text-align: right;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+/* Botão */
+.botao-sobre-imagem {
+  background: #FF4500;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Efeito hover no botão */
+.botao-sobre-imagem:hover {
+  background: #E03E00;
+  transform: scale(1.05);
+}
+
