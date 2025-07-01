@@ -1,0 +1,328 @@
+
+/* base do codigo nao MEXA  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+  background-image: url("/Tcc/Imagens/pexels-kwei-kofi-8493777.jpg");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  width: 100%;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.topo {
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Menu suspenso */
+.dropdown {
+  position: relative;
+}
+
+.dropdown a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.dropdown:hover > a {
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+.dropdown-itens {
+  display: none;
+  position: absolute;
+  background-color: rgba(24, 23, 23, 0.95);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-top: 3px solid #FF6B00;
+  backdrop-filter: blur(5px);
+}
+
+.dropdown-itens a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #333;
+}
+
+.dropdown-itens a:hover {
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+.dropdown:hover .dropdown-itens {
+  display: block;
+}
+
+/* Barra de pesquisa */
+.pesquisa {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  width: 300px;
+}
+
+/* Rodapé */
+footer {
+  color: white;
+  padding: 40px 20px;
+  width: 100%;
+  margin-top: auto;
+  background-color: black;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 0.85em;
+  text-align: center;
+  color: #aaa;
+}
+
+/* Botão DOAR */
+.doar-button {
+  background-color: #FF6B00;
+  color: white;
+  margin: 10px 0;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: block;
+  width: 100%;
+  max-width: 230px;
+}
+
+.doar-button:hover {
+  background-color: #e05d00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .topo {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .dropdown {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .dropdown-itens {
+    position: static;
+    width: 100%;
+  }
+  
+  .pesquisa {
+    width: 100%;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .doar-button {
+    margin: 10px auto;
+  }
+}
+.noticias-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.noticia-item {
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000000;
+}
+
+.noticia-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.noticia-imagem {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.noticia-conteudo {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.noticia-titulo {
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+ 
+.noticia-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.noticia-link:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.noticia-link:hover .noticia-titulo {
+    color: #ffffff;
+}
+/* Estilo básico para a barra de navegação */
+.button-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 30px 0;
+    padding: 15px 0;
+}
+
+/* Estilo para todos os links */
+.button-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    height: 36px;
+}
+
+/* Efeito hover */
+.button-nav a:hover {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+}
+
+/* Estilo para os botões de navegação (Voltar/Próximo) */
+.button-nav a:first-child,
+.button-nav a:last-child {
+    font-weight: 600;
+    min-width: 80px;
+}
+
+/* Estilo para os números das páginas */
+.button-nav a:not(:first-child):not(:last-child) {
+    min-width: 36px;
+}
+
+/* Estilo para a página atual */
+.button-nav a[href="noticias3.html"] {
+    background-color: #ff9900;
+    color: white;
+    border-color: #ff7b00;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+    .button-nav {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    
+    .button-nav a {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
