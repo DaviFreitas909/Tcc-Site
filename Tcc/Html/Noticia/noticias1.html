@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Habitat Brasil</title>
-  <link rel="stylesheet" href="/Tcc/CSS/Noticias paginas/noticias1.css">
-  <link rel="shortcut icon" href="/Tcc/Imagens/logo2.png" type="image/x-icon">
-  <script src="/Tcc/JavaS/Noticias/noticias.js"></script>
+  <link rel="stylesheet" href="/CSS/Noticias paginas/noticias1.css">
+  <link rel="shortcut icon" href="/Imagens/logo2.png" type="image/x-icon">
+  <script src="/JavaS/Noticias/noticias.js"></script>
 </head>
 
 <body>
    <header class="cabecalho">
     <div class="topo">
-      <a href="/Tcc/Html/index.html">
-        <img src="/Tcc/Imagens/logo.png" width="250" alt="Logo Habitat Brasil">
+      <a href="/Html/index.html">
+        <img src="/Imagens/logo.png" width="250" alt="Logo Habitat Brasil">
       </a>
 
      <div class="dropdown">
@@ -73,35 +73,31 @@
 <div class="button-nav">
 <a href="#"><</a>
 <a href="noticias1.html">1</a>
-<a href="noticias2.html">2</a>
-<a href="noticias3.html">3</a>
-<a href="noticias4.html">4</a>
-<a href="noticias5.html">5</a>
-<a href="noticias2.html">></a>
+<a href="#">></a>
 </div>
   </main>
 
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-col logo">
-        <img src="/Tcc/Imagens/logo.png" width="250px" alt="Habitat Brasil">
+        <img src="../Imagens/logo.png" width="250px" alt="Habitat Brasil">
         <h4><strong>Nossas Redes Sociais</strong></h4>
         <a href="https://www.facebook.com/habitat.br/" target="_blank">
-          <img src="/Tcc/Imagens/facebook.png" style="width: 50px;" alt="Icone do facebook">
+          <img src="/Imagens/facebook.png" style="width: 50px;" alt="Icone do facebook">
         </a>
         <a href="https://www.instagram.com/habitatbrasil/" target="_blank">
-          <img src="/Tcc/Imagens/instagram.png" style="width: 50px;" alt="logo do instagram">
+          <img src="/Imagens/instagram.png" style="width: 50px;" alt="logo do instagram">
         </a>
         <a href="https://www.linkedin.com/company/habitat-para-a-humanidade-brasil/" target="_blank">
-          <img src="/Tcc/imagens/linkendin.png" style="width: 50px; " alt="Logo do linkendin">
+          <img src="/imagens/linkendin.png" style="width: 50px; " alt="Logo do linkendin">
         </a>
         <a href="https://twitter.com/habitat_brasil" target="_blank">
-          <img src="/Tcc/Imagens/twitter.png" style="width: 50px; " alt="Logo da twitter">
+          <img src="/Imagens/twitter.png" style="width: 50px; " alt="Logo da twitter">
         </a>
         <a href="https://www.youtube.com/user/HabitatBrasil" target="_blank">
-          <img src="/Tcc/Imagens/youtube.png" style="width: 50px;" alt="Logo do Youtube">
+          <img src="/Imagens/youtube.png" style="width: 50px;" alt="Logo do Youtube">
         </a>
-        <a href="/Tcc/Html/Apoie/doação.html">
+        <a href="/Html/Apoie/doação.html">
           <button class="doar-button"><strong>DOAR</strong></button>
         </a>
       </div>
@@ -126,19 +122,59 @@
 
       <div class="footer-col selos">
         <h4>Reconhecimento</h4>
-        <img src="/Tcc/Imagens/selo diversidade.png" alt="Selo Direitos Humanos">
-        <img src="/Tcc/Imagens/melhores ongs.png" alt="Melhores ONGs">
-        <img src="/Tcc/Imagens/certificacao.png" alt="Organização Validada">
+        <img src="/Imagens/selo diversidade.png" alt="Selo Direitos Humanos">
+        <img src="/Imagens/melhores ongs.png" alt="Melhores ONGs">
+        <img src="/Imagens/certificacao.png" alt="Organização Validada">
         <p>Doações via PIX: relacionamento@hph.org.br</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      manidade Brasil – <a href="/Tcc/Html/Politicas/politicaPrivacidade.html">Política de Privacidade</a> | 
-      <a href="/Tcc/Html/Politicas/politicaDoardor.html">Política do Doador</a> | 
+      manidade Brasil – <a href="/Html/Politicas/politicaPrivacidade.html">Política de Privacidade</a> | 
+      <a href="/Html/Politicas/politicaDoardor.html">Política do Doador</a> | 
       <a href="https://www.webinhood.com.br/" target="_blank">Desenvolvido por Webinhood</a>
       <p>© 2018 – Habitat Brasil</p>
     </div>
+
+    <script>
+         const menu = document.getElementById('menu-acessibilidade');
+    const btnMenu = document.getElementById('acessibilidade-btn');
+    const btnAumentar = document.getElementById('btn-aumentar');
+    const btnDiminuir = document.getElementById('btn-diminuir');
+    const btnContraste = document.getElementById('btn-contraste');
+    const btnResetar = document.getElementById('btn-resetar');
+
+    let tamanhoFonte = 16;
+    let contrasteAtivo = false;
+
+    btnMenu.addEventListener('click', () => {
+      const visivel = menu.style.display === 'block';
+      menu.style.display = visivel ? 'none' : 'block';
+      menu.setAttribute('aria-hidden', visivel);
+    });
+
+    btnAumentar.addEventListener('click', () => {
+      tamanhoFonte += 2;
+      document.documentElement.style.setProperty('--fonte-tamanho', tamanhoFonte + 'px');
+    });
+
+    btnDiminuir.addEventListener('click', () => {
+      tamanhoFonte = Math.max(10, tamanhoFonte - 2);
+      document.documentElement.style.setProperty('--fonte-tamanho', tamanhoFonte + 'px');
+    });
+
+    btnContraste.addEventListener('click', () => {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    });
+
+    btnResetar.addEventListener('click', () => {
+      tamanhoFonte = 16;
+      contrasteAtivo = false;
+      document.documentElement.style.setProperty('--fonte-tamanho', '16px');
+      document.body.classList.remove('alto-contraste');
+    });
+    </script>
   </footer>
 
 </body>

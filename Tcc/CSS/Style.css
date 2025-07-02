@@ -1,9 +1,14 @@
-/* ===== BASE STYLES ===== */
+
+@font-face {
+  font-family: poppins-bold;
+  src: url(/CSS/Fontes/Poppins-BoldItalic.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+
 }
 
 body {
@@ -131,12 +136,12 @@ body {
 .titulo-noticias {
   text-align: center;
   margin: 10px auto;
-  color: rgb(70, 64, 64);
+  color: rgb(255, 252, 252);
   padding: 15px;
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 600;
   width: fit-content;
-
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 8px;
 }
 
@@ -387,3 +392,127 @@ footer {
     font-size: 1rem;
   }
 }
+/* Estilos adicionais para as novas funcionalidades */
+    .payment-method {
+      margin: 10px 0;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .payment-method:hover {
+      background-color: #f5f5f5;
+    }
+    
+    .payment-method.selecionado {
+      border-color: #2ecc71;
+      background-color: #e8f8f0;
+    }
+    
+    .payment-method input[type="radio"] {
+      margin-right: 10px;
+    }
+    
+    .payment-details {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+    
+    .payment-details.active {
+      display: block;
+    }
+    
+    #qrcode-container {
+      margin: 20px auto;
+      text-align: center;
+    }
+    
+    #qrcode {
+      display: inline-block;
+      margin: 10px 0;
+    }
+    
+    .pix-instructions {
+      background-color: #f0f8ff;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    
+    .credit-card-form input {
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .card-icons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .card-icons img {
+      height: 30px;
+    }
+    
+      :root {
+      --fonte-tamanho: 16px;
+    }
+
+    body {
+      font-size: var(--fonte-tamanho);
+      font-family: Arial, sans-serif;
+      transition: background 0.3s, color 0.3s, font-size 0.3s;
+    }
+
+    #acessibilidade-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    #menu-acessibilidade {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      display: none;
+      z-index: 998;
+    }
+
+    #menu-acessibilidade button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    #menu-acessibilidade button:focus {
+      outline: 2px solid #333;
+      background-color: #ddd;
+    }
+
+    .alto-contraste {
+      background-color: #000 !important;
+      color: #fff !important;
+    }
