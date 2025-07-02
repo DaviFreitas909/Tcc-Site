@@ -156,5 +156,48 @@
       <p>© 2018 – Habitat Brasil</p>
     </div>
   </footer>
+
+  <script> 
+  
+  const menu = document.getElementById('menu-acessibilidade');
+    const btnMenu = document.getElementById('acessibilidade-btn');
+    const btnAumentar = document.getElementById('btn-aumentar');
+    const btnDiminuir = document.getElementById('btn-diminuir');
+    const btnContraste = document.getElementById('btn-contraste');
+    const btnResetar = document.getElementById('btn-resetar');
+
+    let tamanhoFonte = 16;
+    let contrasteAtivo = false;
+
+    btnMenu.addEventListener('click', () => {
+      const visivel = menu.style.display === 'block';
+      menu.style.display = visivel ? 'none' : 'block';
+      menu.setAttribute('aria-hidden', visivel);
+    });
+
+    btnAumentar.addEventListener('click', () => {
+      tamanhoFonte += 2;
+      document.documentElement.style.setProperty('--fonte-tamanho', tamanhoFonte + 'px');
+    });
+
+    btnDiminuir.addEventListener('click', () => {
+      tamanhoFonte = Math.max(10, tamanhoFonte - 2);
+      document.documentElement.style.setProperty('--fonte-tamanho', tamanhoFonte + 'px');
+    });
+
+    btnContraste.addEventListener('click', () => {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    });
+
+    btnResetar.addEventListener('click', () => {
+      tamanhoFonte = 16;
+      contrasteAtivo = false;
+      document.documentElement.style.setProperty('--fonte-tamanho', '16px');
+      document.body.classList.remove('alto-contraste');
+    });
+  
+  
+  </script>
 </body>
 </html>
