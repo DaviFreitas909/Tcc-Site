@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voluntario - Habitat Brasil</title>
+  <link rel="stylesheet" href="/CSS/Apoie/voluntario.css">
+<script src="/JavaS/Apoie/voluntario.js"></script>
+ <link rel="shortcut icon" href="/Imagens/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="topo">
+      <a href="/Html/index.html">
+        <img src="/Imagens/logo.png" width="250" alt="Logo Habitat Brasil">
+      </a>
+
+     <div class="dropdown">
+        <a href="#">Apoie</a>
+        <div class="dropdown-itens">
+          <a href="doação.html">Faça uma Doação</a>
+          <a href="maoNaMassa.html">Mão na Massa</a>
+          <a href="voluntario.html">Voluntariado Corporativo</a>
+          <a href="envolva.html">Envolva sua Empresa</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#">Sobre nos</a>
+        <div class="dropdown-itens">
+          <a href="../Sobre nos/sobre.html">Sobre nos</a>
+          <a href="../Sobre nos/gorvenança.html">Governança & Equipe</a>
+          <a href="../Sobre nos/trabalheConosco.html">Trabalhe Conosco</a>
+          <a href="../Sobre nos/inprensa.html">Sala de imprensa</a>
+          <a href="../Sobre nos/contatos.html">Contato</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#">Projetos</a>
+        <div class="dropdown-itens">
+          <a href="../Projetos/projetos.html">Projetos</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#">Impacto</a>
+        <div class="dropdown-itens">
+          <a href="../Impactos/impactos.html">Impacto</a>
+          <a href="../Impactos/causa.html">Nossa causa</a>
+          <a href="../Impactos/historias.html">Historias</a>
+          <a href="../Impactos/mapaDeOrganizacoes.html">Mapa de Organnizaçoes</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#">Parceiros</a>
+        <div class="dropdown-itens">
+          <a href="../Parceiros/parceiros.html">Parceiros</a>
+          <a href="../Parceiros/conheca.html">Conheça Nossos Parceiros</a>
+        </div>
+      </div>
+
+      <input class="pesquisa" type="search" placeholder="Pesquisar...">
+    </div>
+
+    <button id="acessibilidade-btn" aria-label="Menu de acessibilidade">🧩</button>
+
+  <div id="menu-acessibilidade" role="dialog" aria-hidden="true">
+    <button id="btn-aumentar">Aumentar Fonte</button>
+    <button id="btn-diminuir">Diminuir Fonte</button>
+    <button id="btn-contraste">Alto Contraste</button>
+    <button id="btn-resetar">Resetar</button>
+  </div>
+  </header>
+
+ <main class="habitat-form-container">
+  <h3 class="habitat-form-title">Voluntario Conosco</h3>
+  
+  <p class="habitat-form-description">
+ Investir no voluntariado corporativo é uma forma de realizar ações sociais que fortalecem as relações entre colaboradores e a empresa, e ainda podem aproximar a empresa da comunidade apoiada. Essa é uma oportunidade única para reforçar os valores da empresa e promover um team building social: integração; fortalecimento da cooperação, empatia, trabalho em equipe e liderança; oportunidade para colaboradores de diferentes níveis hierárquicos trabalharem lado a lado com o mesmo objetivo e aprenderem uns com os outros.
+As ações de voluntariado corporativo acontecem nas comunidades onde atuamos. Os colaboradores da Empresa poderão colocar a mão na massa e apoiar as reformas nas casas das famílias e a construção de cisternas.
+Quer saber mais? Entre em contato conosco e agende uma conversa!
+Para parcerias no Nordeste
+Sílvia Rosa
+silvia@habitatbrasil.org.br
+
+Para parcerias no Sudeste
+Adriana Magalhães
+adriana.magalhaes@hph.org.br
+
+Ou preencha o formulário abaixo e aguarde nosso contato!<a href="mailto:voluntariado@hph.org.br">voluntariado@hph.org.br</a>
+  </p>
+
+  <form id="habitatVolunteerForm">
+    <div class="habitat-form-group">
+      <p>Nome*</p>
+      <input type="text" class="habitat-form-input" required>
+    </div>
+    
+    <div class="habitat-form-group">
+      <p>Email*</p>
+      <input type="email" class="habitat-form-input" required>
+    </div>
+    
+    <div class="habitat-form-group">
+      <p>Celular*</p>
+      <input type="tel" class="habitat-form-input" required>
+    </div>
+    
+    <div class="habitat-form-group">
+      <p>Estado*</p>
+      <label for="estado">Escolha seu estado</label>
+      <select id="Estado" class="habitat-form-select" required>
+        <option value="">Selecione seu estado</option>
+        <option value="AC">Acre</option>
+        <option value="AL">Alagoas</option>
+        <option value="AP">Amapá</option>
+        <option value="AM">Amazonas</option>
+        <option value="BA">Bahia</option>
+        <option value="CE">Ceará</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="ES">Espírito Santo</option>
+        <option value="GO">Goiás</option>
+        <option value="MA">Maranhão</option>
+        <option value="MT">Mato Grosso</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="PA">Pará</option>
+        <option value="PB">Paraíba</option>
+        <option value="PR">Paraná</option>
+        <option value="PE">Pernambuco</option>
+        <option value="PI">Piauí</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RN">Rio Grande do Norte</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="RO">Rondônia</option>
+        <option value="RR">Roraima</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+        <option value="SE">Sergipe</option>
+        <option value="TO">Tocantins</option>
+      </select>
+    </div>
+    
+    <div class="habitat-form-group">
+      <label for="cidade">Escolha sua cidade*</label>
+      <select id="cidade" class="habitat-form-select" disabled required>
+        <option value="">Primeiro selecione seu estado</option>
+      </select>
+    </div>
+    
+    <div class="habitat-form-group">
+      <label for="Como-conheceu-a-habitat">Como conheceu a Habitat?*</label>
+      <select id="Como-conheceu-a-habitat" class="habitat-form-select" required>
+        <option value="">Selecione</option>
+        <option value="Atravez de amigos">Através de amigos</option>
+        <option value="Site">Site</option>
+        <option value="Redes Sociais">Redes Sociais (Facebook, Instagram)</option>
+        <option value="Abordagem na rua">Abordagem na rua</option>
+        <option value="Empresa ou Faculdade">Empresa ou Faculdade</option>
+        <option value="Outros">Outros</option>
+      </select>
+    </div>
+
+    <button type="submit" class="habitat-submit-btn">Quero colocar a mão na massa</button>
+  </form>
+
+  
+</main>
+
+   <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col logo">
+        <img src="../Imagens/logo.png" width="250px" alt="Habitat Brasil">
+        <h4><strong>Nossas Redes Sociais</strong></h4>
+        <a href="https://www.facebook.com/habitat.br/" target="_blank">
+          <img src="/Imagens/facebook.png" style="width: 50px;" alt="Icone do facebook">
+        </a>
+        <a href="https://www.instagram.com/habitatbrasil/" target="_blank">
+          <img src="/Imagens/instagram.png" style="width: 50px;" alt="logo do instagram">
+        </a>
+        <a href="https://www.linkedin.com/company/habitat-para-a-humanidade-brasil/" target="_blank">
+          <img src="/imagens/linkendin.png" style="width: 50px; " alt="Logo do linkendin">
+        </a>
+        <a href="https://twitter.com/habitat_brasil" target="_blank">
+          <img src="/Imagens/twitter.png" style="width: 50px; " alt="Logo da twitter">
+        </a>
+        <a href="https://www.youtube.com/user/HabitatBrasil" target="_blank">
+          <img src="/Imagens/youtube.png" style="width: 50px;" alt="Logo do Youtube">
+        </a>
+        <a href="/Html/Apoie/doação.html">
+          <button class="doar-button"><strong>DOAR</strong></button>
+        </a>
+      </div>
+
+      <div class="footer-col contato">
+        <h4>Contato</h4>
+        <p><strong>Escritório Nacional</strong><br>
+          CNPJ: 65.171.860/0001-33<br>
+          Rua São Gonçalo, 118, Recife, PE<br>
+          Email: <a href="mailto:habitat@habitatbrasil.org.br">habitat@habitatbrasil.org.br</a></p>
+
+        <p><strong>Inovações Urbanas</strong><br>
+          CNPJ: 18.093.824/0001-19<br>
+          Rua Pamplona, 818, São Paulo, SP<br>
+          Email: <a href="mailto:contato@hph.org.br">contato@hph.org.br</a></p>
+
+        <p><strong>Atendimento ao Doador:</strong><br>
+          Seg à sex, 10h–17h<br>
+          WhatsApp: (11) 95073-6547<br>
+          Email: <a href="mailto:relacionamento@hph.org.br">relacionamento@hph.org.br</a></p>
+      </div>
+
+      <div class="footer-col selos">
+        <h4>Reconhecimento</h4>
+        <img src="/Imagens/selo diversidade.png" alt="Selo Direitos Humanos">
+        <img src="/Imagens/melhores ongs.png" alt="Melhores ONGs">
+        <img src="/Imagens/certificacao.png" alt="Organização Validada">
+        <p>Doações via PIX: relacionamento@hph.org.br</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      manidade Brasil – <a href="/Html/Politicas/politicaPrivacidade.html">Política de Privacidade</a> | 
+      <a href="/Html/Politicas/politicaDoardor.html">Política do Doador</a> | 
+      <a href="https://www.webinhood.com.br/" target="_blank">Desenvolvido por Webinhood</a>
+      <p>© 2018 – Habitat Brasil</p>
+    </div>
+
+    
+  </footer>
+  <script>
+         const menu = document.getElementById('menu-acessibilidade');
+    const btnMenu = document.getElementById('acessibilidade-btn');
+    const btnAumentar = document.getElementById('btn-aumentar');
+    const btnDiminuir = document.getElementById('btn-diminuir');
+    const btnContraste = document.getElementById('btn-contraste');
+    const btnResetar = document.getElementById('btn-resetar');
+
+    let tamanhoFonte = 16;
+    let contrasteAtivo = false;
+
+    btnMenu.addEventListener('click', () => {
+      const visivel = menu.style.display === 'block';
+      menu.style.display = visivel ? 'none' : 'block';
+      menu.setAttribute('aria-hidden', visivel);
+    });
+
+    btnAumentar.addEventListener('click', () => {
+      tamanhoFonte += 2;
+      document.documentElement.style.setProperty('--fonte-tamanho', tamanhoFonte + 'px');
+    });
+
+    btnDiminuir.addEventListener('click', () => {
+      tamanhoFonte = Math.max(10, tamanhoFonte - 2);
+      document.documentElement.style.setProperty('--fonte-tamanho', tamanhoFonte + 'px');
+    });
+
+    btnContraste.addEventListener('click', () => {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    });
+
+    btnResetar.addEventListener('click', () => {
+      tamanhoFonte = 16;
+      contrasteAtivo = false;
+      document.documentElement.style.setProperty('--fonte-tamanho', '16px');
+      document.body.classList.remove('alto-contraste');
+    });
+    </script>
+</body>
+
+</html>
